@@ -1,11 +1,11 @@
 #eredmeny td{
-    width: 55px;
-    height: 55px;
-    border: 1px solid purple; 
+    width: 50px;
+    height: 50px;
+    border: 3px solid #2808e0; 
     text-align: center;
-    font-size: 24px;
+    font-size: 23px;
     font-weight: bold;
-    color: white;
+    color: whitesmoke;
 }
 #eredmeny
 {
@@ -18,7 +18,7 @@
 #gombok
 {
     border: 1px solid black;
-    color: blueviolet;
+    color: #2808e0;
    
 }
 body
@@ -29,7 +29,7 @@ body
 }
 #gomb2
 {
-    background-color: blueviolet;
+    background-color: #2808e0;
     border-radius: 0px 15px 0px 15px;
 }
 .modal-header
@@ -41,22 +41,22 @@ body
 .modal-header
 {
     background-color: black;
-    color: blueviolet;
+    color: #2808e0;
 
 }
 .modal-body
 {
     background-color: black;
-    color: blueviolet;
+    color: #2808e0;
 }
 .btn-close
 {
-    background-color: blueviolet;
-    color: blueviolet;
+    background-color: #2808e0;
+    color: #2808e0;
 }
 #gomb2  
 {
-    background-color: blueviolet;
+    background-color: #2808e0;
     border-radius: 0px 15px 0px 15px;
     display: grid;
     width: 330px;
@@ -178,13 +178,39 @@ td
 }
 #gomb3
 {
-    background-color: blueviolet;
+    background-color: #2808e0;
     border-radius: 0px 15px 0px 15px;
 }
 
 #gomb1
 {
-    background-color: blueviolet;
+    background-color: #2808e0;
     border-radius: 0px 15px 0px 15px;
     width: 440px;
+}
+.scrollbar
+{
+	margin-left: 30px;
+	float: left;
+	height: 300px;
+	width: 65px;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+::-webkit-scrollbar-track
+{
+	border: 1px solid black;
+	background-color: #000000;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #2808e0;	
 }
