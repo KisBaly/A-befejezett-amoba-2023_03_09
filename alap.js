@@ -90,6 +90,7 @@ function kattint(td){
                         nyert = true;
                         nyer1 = 1;
                         nyer2 = 0;
+                        alert("O nyert");
                         Streak();
 
                     }
@@ -101,6 +102,7 @@ function kattint(td){
                         nyert = true;
                         nyer1 = 0;
                         nyer2 = 1;
+                      alert("X nyert");
                         Streak();
                     }
                 }
@@ -126,6 +128,7 @@ function kattint(td){
                         nyert = true;
                         nyer1 = 1;
                         nyer2 = 0;
+                      alert("O nyert");
                         Streak();
 
                     }
@@ -137,6 +140,7 @@ function kattint(td){
                         nyert = true;
                         nyer1 = 0;
                         nyer2 = 1;
+                      alert("X nyert");
                         Streak();
                     }
                 }
@@ -162,6 +166,7 @@ function kattint(td){
                         nyert = true;
                         nyer1 = 1;
                         nyer2 = 0;
+                      alert("O nyert");
                         Streak();
                     }
                     else if(jatekos == "X")
@@ -173,6 +178,7 @@ function kattint(td){
                         nyert = true;
                         nyer1 = 0;
                         nyer2 = 1;
+                      alert("X nyert");
                         Streak();
                     }
 
@@ -198,6 +204,7 @@ function kattint(td){
                         nyert = true;
                         nyer1 = 1;
                         nyer2 = 0;
+                      alert("O nyert");
                         Streak();
                     }
                     else if(jatekos == "X")
@@ -209,6 +216,7 @@ function kattint(td){
                         nyert = true;
                         nyer1 = 0;
                         nyer2 = 1;
+                      alert("X nyert");
                         Streak();
                     }
                 }
