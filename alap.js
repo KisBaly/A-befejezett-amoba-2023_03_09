@@ -231,6 +231,7 @@ function kattint(td){
         jelx++;
         pontx.innerHTML= jelx;
         nyert = true;
+        alert("Döntetlen");
        }
        
         
