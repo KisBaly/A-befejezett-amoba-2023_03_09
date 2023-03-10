@@ -107,6 +107,42 @@ function kattint(td){
                 
             }
         }
+        else if(sor == 5 && oszlop == 5)
+        {
+            for(let i = 0; i<8;i+=2)
+            {
+                if(megszamol(i,jatekos,
+                    Number(td.dataset.sor),Number(td.dataset.oszlop))+
+                megszamol(i+1,jatekos,
+                    Number(td.dataset.sor),Number(td.dataset.oszlop))+1==5)
+                {
+                    console.log("Nyert:"+jatekos);
+                    if(jatekos == "O")
+                    {
+                       
+                        var ponto = document.getElementById("allaso");
+                        jelo++;
+                        ponto.innerHTML= jelo;
+                        nyert = true;
+                        nyer1 = 1;
+                        nyer2 = 0;
+                        Streak();
+
+                    }
+                    else if(jatekos == "X")
+                    {
+                        var pontx = document.getElementById("allas");
+                        jelx++;
+                        pontx.innerHTML= jelx;
+                        nyert = true;
+                        nyer1 = 0;
+                        nyer2 = 1;
+                        Streak();
+                    }
+                }
+                
+            }
+        }
         else if(sor == 4 && oszlop == 4)
         {
             for(let i = 0; i<8;i+=2)
@@ -195,11 +231,12 @@ function kattint(td){
    
 
 function TablaGeneralas(){
+    nyert = false;
     sor = document.getElementById("sor").value;
     oszlop = document.getElementById("oszlop").value;
     div = document.getElementById("eredmeny");
     div.innerHTML = "";
-    nyert = false;
+    
     
     console.log(sor, oszlop);
     uresMatrix();
@@ -249,7 +286,7 @@ function Nevmentes()
 }
 
 
-/* buggos szval off
+/* buggos szval off 
 function Nyert()
 {
     var nyertx = document.getElementById("nyertx");
