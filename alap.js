@@ -78,7 +78,7 @@ function kattint(td){
                 if(megszamol(i,jatekos,
                     Number(td.dataset.sor),Number(td.dataset.oszlop))+
                 megszamol(i+1,jatekos,
-                    Number(td.dataset.sor),Number(td.dataset.oszlop))+1==5)
+                    Number(td.dataset.sor),Number(td.dataset.oszlop))+1>=5)
                 {
                     console.log("Nyert:"+jatekos);
                     if(jatekos == "O")
@@ -91,6 +91,7 @@ function kattint(td){
                         nyer1 = 1;
                         nyer2 = 0;
                         alert("O nyert");
+                        matrix = [];
                         Streak();
 
                     }
@@ -103,6 +104,7 @@ function kattint(td){
                         nyer1 = 0;
                         nyer2 = 1;
                       alert("X nyert");
+                      matrix = [];
                         Streak();
                     }
                 }
@@ -116,7 +118,7 @@ function kattint(td){
                 if(megszamol(i,jatekos,
                     Number(td.dataset.sor),Number(td.dataset.oszlop))+
                 megszamol(i+1,jatekos,
-                    Number(td.dataset.sor),Number(td.dataset.oszlop))+1==5)
+                    Number(td.dataset.sor),Number(td.dataset.oszlop))+1>=5)
                 {
                     console.log("Nyert:"+jatekos);
                     if(jatekos == "O")
@@ -129,6 +131,7 @@ function kattint(td){
                         nyer1 = 1;
                         nyer2 = 0;
                       alert("O nyert");
+                      matrix = [];
                         Streak();
 
                     }
@@ -141,6 +144,7 @@ function kattint(td){
                         nyer1 = 0;
                         nyer2 = 1;
                       alert("X nyert");
+                      matrix = [];
                         Streak();
                     }
                 }
@@ -166,7 +170,8 @@ function kattint(td){
                         nyert = true;
                         nyer1 = 1;
                         nyer2 = 0;
-                      alert("O nyert");
+                        alert("O nyert");
+                        matrix = [];
                         Streak();
                     }
                     else if(jatekos == "X")
@@ -179,6 +184,7 @@ function kattint(td){
                         nyer1 = 0;
                         nyer2 = 1;
                       alert("X nyert");
+                      matrix = [];
                         Streak();
                     }
 
@@ -205,6 +211,7 @@ function kattint(td){
                         nyer1 = 1;
                         nyer2 = 0;
                       alert("O nyert");
+                      matrix = [];
                         Streak();
                     }
                     else if(jatekos == "X")
@@ -216,7 +223,8 @@ function kattint(td){
                         nyert = true;
                         nyer1 = 0;
                         nyer2 = 1;
-                      alert("X nyert");
+                        alert("X nyert");
+                        matrix = [];
                         Streak();
                     }
                 }
@@ -232,6 +240,7 @@ function kattint(td){
         pontx.innerHTML= jelx;
         nyert = true;
         alert("Döntetlen");
+        matrix = [];
        }
        
         
@@ -240,12 +249,15 @@ function kattint(td){
    
 
 function TablaGeneralas(){
-    nyert = false;
     sor = document.getElementById("sor").value;
     oszlop = document.getElementById("oszlop").value;
     div = document.getElementById("eredmeny");
     div.innerHTML = "";
-    
+    nyert = false;
+    leptet = 0;
+    nyer1 = 0;
+    nyer2 = 0;
+    matrix = [];
     
     console.log(sor, oszlop);
     uresMatrix();
@@ -262,6 +274,7 @@ function TablaGeneralas(){
         table.appendChild(tr);
     }
     div.appendChild(table);
+    
 }
 
 
@@ -293,7 +306,31 @@ function Nevmentes()
     idexnev.innerHTML= xnev;
     ideynev.innerHTML= ynev;
 }
+function megvaneaminvmax()
+{
+    var mini1 = document.getElementById("sor").value;
+    var mini2 = document.getElementById("oszlop").value;
+    var maxi1 = document.getElementById("sor").value;
+    var maxi2 = document.getElementById("oszlop").value;
+    if(mini1 < 3 && mini2 < 3)
+    {
+        alert("A minimum érték 3x3!")
+    }
+    else if(maxi1 < 3 && maxi2 < 3)
+    {
+        alert("A maximum érték 10x10!")
+    }
+    else if(mini1 != mini2)
+    {
 
+    }
+    else if(maxi1 != maxi2)
+    {
+
+    }
+
+    
+}
 
 /* buggos szval off 
 function Nyert()
